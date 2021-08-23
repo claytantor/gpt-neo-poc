@@ -1,3 +1,14 @@
-import sys
+import sys, os
+import json
+
 def handler(event, context):
-    return 'Hello from AWS Lambda using Python' + sys.version + '!'    
+    json_region = os.environ['AWS_REGION']
+    return {
+        "statusCode": 200,
+        "headers": {
+            "Content-Type": "application/json"
+        },
+        "body": json.dumps({
+            "Region ": json_region
+        })
+    }
