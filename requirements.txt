@@ -1,11 +1,10 @@
 certifi==2020.12.5
 chardet==4.0.0
-click==8.0.0
+click
 filelock==3.0.12
-huggingface-hub==0.0.8
 idna==2.10
-joblib==1.0.1
-numpy==1.20.3
+joblib
+numpy
 packaging==20.9
 pyparsing==2.4.7
 regex==2021.4.4
