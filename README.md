@@ -6,6 +6,6 @@ docker build -t claytantor/gpt-neo-poc:latest .
 
 aws configure
 pip install awscli
-aws ecr-public get-login-password --region us-east-1 | docker login --username AWS --password-stdin public.ecr.aws/x0y6y2q4
-docker tag claytantor/gpt-neo-poc:latest public.ecr.aws/x0y6y2q4/claytantor/gpt-neo-poc:latest
-docker push public.ecr.aws/x0y6y2q4/claytantor/gpt-neo-poc:latest
+aws ecr get-login-password --region us-west-2 | docker login --username AWS --password-stdin 705212546939.dkr.ecr.us-west-2.amazonaws.com
+docker tag claytantor/gpt-neo-poc:latest 705212546939.dkr.ecr.us-west-2.amazonaws.com/claytantor/gpt-neo-poc:latest
+docker push 705212546939.dkr.ecr.us-west-2.amazonaws.com/claytantor/gpt-neo-poc:latest
